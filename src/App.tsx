@@ -8,6 +8,7 @@ import {
   ArrowDown,
 } from 'lucide-react';
 
+
 const projects = [
   {
     number: "01",
@@ -17,26 +18,33 @@ const projects = [
       "A workspace management project built while exploring backend architecture, authentication, and data management.",
     stack: ["NestJS", "TypeScript", "PostgreSQL", "Prisma"],
     href: "https://github.com/Tunez666/LifeTreeTs",
+    status: "In Development",
+    statusType: "development",
   },
   {
     number: "02",
-    name: "gentelmen",
-    type: "FULLSTACK · MUSIC",
+    name: "WMS",
+    type: "FULLSTACK · WAREHOUSE",
     description:
-      "A music discovery project connecting different music sources through a unified experience.",
-    stack: ["NestJS", "React", "TypeScript", "PostgreSQL"],
-    href: "https://github.com/Tunez666/gentelmen",
+      "A warehouse management system for handling inventory, storage locations, receiving workflows, and operational requests.",
+    stack: ["NestJS", "React", "TypeScript", "PostgreSQL", "Prisma", "Docker"],
+    href: "https://github.com/Tunez666/wms_ts_first",
+    status: "In Progress",
+    statusType: "progress",
   },
   {
     number: "03",
     name: "Community Forum",
     type: "FULLSTACK · COMMUNITY",
     description:
-      "An early large-scale project with accounts, roles, discussions, moderation tools, and notifications.",
+      "A community forum with user accounts, role-based access, discussions, moderation tools, and notifications.",
     stack: ["Node.js", "Express", "MySQL", "EJS"],
     href: "https://github.com/Tunez666/diplome",
+    status: "Completed",
+    statusType: "completed",
   },
 ];
+
 
 const skills = [
   { name: "TypeScript", group: "LANGUAGE" },
@@ -206,9 +214,26 @@ function App() {
                 <p className="project-description">{project.description}</p>
                 <div className="tag-list">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
               </div>
-              <a className="project-link" href={project.href} target="_blank" rel="noreferrer" aria-label={`View ${project.name} on GitHub`}>
-                <ArrowUpRight size={21} />
-              </a>
+
+              <div className="project-actions">
+                <span
+                  className={`project-status status-${project.statusType}`}
+                  aria-label={`Project status: ${project.status}`}
+                >
+                  {project.status}
+                </span>
+
+                <a
+                  className="project-link"
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`View ${project.name} on GitHub`}
+                >
+                  <ArrowUpRight size={21} />
+                </a>
+              </div>
+
             </article>
           ))}
         </div>

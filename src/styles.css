@@ -187,3 +187,89 @@ footer .wordmark { font-size: 23px; color: #ddd4da; }
   color: #e4c58e;
   text-decoration: underline;
 }
+
+
+/* Project status */
+
+.project-card {
+  grid-template-columns: 70px minmax(0, 1fr) auto;
+}
+
+.project-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 9px;
+  border: 1px solid;
+  font-size: 8px;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.project-status::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-development {
+  color: #c77b84;
+  border-color: rgba(199, 123, 132, 0.25);
+  background: rgba(166, 59, 72, 0.07);
+}
+
+.status-development::before {
+  background: #c77b84;
+  box-shadow: 0 0 7px rgba(199, 123, 132, 0.5);
+}
+
+.status-progress {
+  color: #bda77b;
+  border-color: rgba(189, 167, 123, 0.25);
+  background: rgba(189, 167, 123, 0.05);
+}
+
+.status-progress::before {
+  background: #bda77b;
+  box-shadow: 0 0 7px rgba(189, 167, 123, 0.4);
+}
+
+.status-completed {
+  color: #8eae98;
+  border-color: rgba(142, 174, 152, 0.25);
+  background: rgba(142, 174, 152, 0.05);
+}
+
+.status-completed::before {
+  background: #8eae98;
+  box-shadow: 0 0 7px rgba(142, 174, 152, 0.4);
+}
+
+/* Mobile */
+
+@media (max-width: 620px) {
+  .project-card {
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  .project-actions {
+    gap: 9px;
+  }
+
+  .project-status {
+    padding: 5px 6px;
+    font-size: 7px;
+    letter-spacing: 0.3px;
+  }
+}
