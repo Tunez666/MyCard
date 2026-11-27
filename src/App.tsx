@@ -235,6 +235,17 @@ function App() {
           <span>© {new Date().getFullYear()} TUNEZ · THE PATH CONTINUES</span>
           <a href="#home" className="back-top">BACK TO TOP ↑</a>
         </footer>
+        <p className="icon-credit">
+          Icon designed by{' '}
+          <a
+            href="https://www.flaticon.com/ru/authors/vectorsmarket15"
+            target="_blank"
+            rel="noreferrer"
+          >
+            vectorsmarket15
+          </a>
+          {' '}from Flaticon
+        </p>
       </section>
     </main>
   );

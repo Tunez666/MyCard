@@ -170,3 +170,20 @@ footer .wordmark { font-size: 23px; color: #ddd4da; }
   footer { margin-top: 90px; gap: 12px; flex-wrap: wrap; }
   footer span { order: 3; width: 100%; }
 }
+.icon-credit {
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 12px 0 20px;
+}
+
+.icon-credit a {
+  color: #c6a46a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.icon-credit a:hover {
+  color: #e4c58e;
+  text-decoration: underline;
+}
